@@ -1,0 +1,16 @@
+[project]
+name = "qr-code-generator"
+version = "0.1.0"
+description = "API and QR code generator"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.123.9",
+    "pydantic-extra-types>=2.10.6",
+    "python-dotenv>=1.2.1",
+    "qrcode[pil]>=8.2",
+    "uvicorn>=0.38.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
