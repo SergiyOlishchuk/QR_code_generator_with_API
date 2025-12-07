@@ -1,9 +1,9 @@
 # QR Code Generator with API
 
 ## Installation
-- [Installation with uv.](#Installation with uv)
-- [Installation with pip.](#Installation with pip)
-- [Installation with docker.](#Installation with docker)
+- [Installation with uv](https://github.com/SergiyOlishchuk/QR_code_generator_with_API?tab=readme-ov-file#installation-with-uv)
+- [Installation with pip.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API/edit/master/README.md#installation-with-pip)
+- [Installation with docker.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API/edit/master/README.md#installation-with-docker) (recommended)
 
 ## Installation with uv
 1. Clone the project.
