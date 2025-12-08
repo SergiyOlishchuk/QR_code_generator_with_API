@@ -9,21 +9,22 @@ from schemas import QRRequest, DefaultAnswer
 
 router = APIRouter()
 
+
 async def process_get_qr_code(data: QRRequest):
     img_buf = QRCodeGenerator(data=data).run()
-    return StreamingResponse(img_buf, media_type='image/png')
+    return StreamingResponse(img_buf, media_type="image/png")
 
-@router.get('/qr')
+
+@router.get("/qr")
 async def qr_get(data: Annotated[QRRequest, Query()]) -> StreamingResponse:
     return await process_get_qr_code(data)
 
-@router.post('/qr')
+
+@router.post("/qr")
 async def qr_post(data: QRRequest) -> StreamingResponse:
     return await process_get_qr_code(data)
 
-@router.get('/')
+
+@router.get("/")
 async def root() -> DefaultAnswer:
-    return DefaultAnswer(
-        message='QR Code Generator',
-        info='Docs: /docs'
-    )
+    return DefaultAnswer(message="QR Code Generator", info="Docs: /docs")
