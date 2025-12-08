@@ -9,9 +9,9 @@ There is interactive docs on `/docs` endpoint.
 
 ## Installation
 - [Installation with uv](https://github.com/SergiyOlishchuk/QR_code_generator_with_API?tab=readme-ov-file#installation-with-uv)
-- [Installation with pip.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API/edit/master/README.md#installation-with-pip)
-- [Installation with docker.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API/edit/master/README.md#installation-with-docker)
-- [Installation with docker compose.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API/edit/master/README.md#installation-with-docker-compose) (recommended)
+- [Installation with pip.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API?tab=readme-ov-file#installation-with-pip)
+- [Installation with docker.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API?tab=readme-ov-file#installation-with-docker)
+- [Installation with docker compose.](https://github.com/SergiyOlishchuk/QR_code_generator_with_API?tab=readme-ov-file#installation-with-docker-compose) (recommended)
 
 ### Installation with uv
 1. Rename '.env.example' file to '.env'.
