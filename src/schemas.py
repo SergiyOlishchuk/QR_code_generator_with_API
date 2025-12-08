@@ -16,14 +16,14 @@ class ErrorCorrect(StrEnum):
     quartile = "quartile"
     high = "high"
 
-    @property
-    def to_quality_constant(self) -> int:
-        return {
-            ErrorCorrect.low: 1,
-            ErrorCorrect.medium: 0,
-            ErrorCorrect.quartile: 3,
-            ErrorCorrect.high: 2,
-        }[self]
+
+class DrawerType(StrEnum):
+    CircleModuleDrawer = "CircleModuleDrawer"
+    GappedSquareModuleDrawer = "GappedSquareModuleDrawer"
+    HorizontalBarsDrawer = "HorizontalBarsDrawer"
+    RoundedModuleDrawer = "RoundedModuleDrawer"
+    SquareModuleDrawer = "SquareModuleDrawer"
+    VerticalBarsDrawer = "VerticalBarsDrawer"
 
 
 class QRRequest(BaseModel):
@@ -58,4 +58,8 @@ class QRRequest(BaseModel):
     back_color: Color = Field(
         Color("white"),
         description="fill_color can change the painting color of QR",
+    )
+    drawer_type: DrawerType = Field(
+        DrawerType.SquareModuleDrawer,
+        description="The drawer_type parameter controls the shape of QR Code",
     )
