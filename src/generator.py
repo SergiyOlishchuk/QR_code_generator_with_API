@@ -12,7 +12,7 @@ class QRCodeGenerator:
     def make_qr_code_image(self):
         qr = qrcode.main.QRCode(
             version=self.data.size,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            error_correction=self.data.quality.to_quality_constant,
             box_size=self.data.box_size,
             border=self.data.border,
         )
@@ -28,6 +28,6 @@ class QRCodeGenerator:
     def run(self):
         img = self.make_qr_code_image()
         buf = BytesIO()
-        img.save(buf, format='PNG')
+        img.save(buf, format="PNG")
         buf.seek(0)
         return buf

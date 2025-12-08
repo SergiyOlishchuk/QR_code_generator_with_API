@@ -1,3 +1,5 @@
+from enum import StrEnum
+
 from pydantic import BaseModel, Field
 from pydantic_extra_types.color import Color
 
@@ -6,6 +8,22 @@ class DefaultAnswer(BaseModel):
     success: bool = True
     message: str
     info: str | None
+
+
+class ErrorCorrect(StrEnum):
+    low = "low"
+    medium = "medium"
+    quartile = "quartile"
+    high = "high"
+
+    @property
+    def to_quality_constant(self) -> int:
+        return {
+            ErrorCorrect.low: 1,
+            ErrorCorrect.medium: 0,
+            ErrorCorrect.quartile: 3,
+            ErrorCorrect.high: 2,
+        }[self]
 
 
 class QRRequest(BaseModel):
@@ -17,6 +35,10 @@ class QRRequest(BaseModel):
         "automatically.",
         ge=1,
         le=40,
+    )
+    quality: ErrorCorrect = Field(
+        ErrorCorrect.medium,
+        description="The quality parameter controls the error correction used for the QR Code. Can be low, medium, quartile or high",
     )
     box_size: int = Field(
         10,
