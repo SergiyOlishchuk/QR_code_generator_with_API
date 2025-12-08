@@ -2,7 +2,7 @@ from io import BytesIO
 
 import qrcode
 
-from .schemas import QRRequest
+from schemas import QRRequest
 
 
 class QRCodeGenerator:

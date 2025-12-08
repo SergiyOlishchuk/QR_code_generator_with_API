@@ -2,10 +2,10 @@ from typing import Annotated
 
 from fastapi import APIRouter
 from fastapi.params import Query
-
-from .generator import QRCodeGenerator
-from .schemas import QRRequest, DefaultAnswer
 from fastapi.responses import StreamingResponse
+
+from generator import QRCodeGenerator
+from schemas import QRRequest, DefaultAnswer
 
 router = APIRouter()
 

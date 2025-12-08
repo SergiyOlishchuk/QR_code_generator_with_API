@@ -2,8 +2,8 @@
 import uvicorn
 from fastapi import FastAPI
 
-from .settings import settings
-from .routing import router as main_router
+from routing import router as main_router
+from settings import settings
 
 app = FastAPI(
     title="QR Code Generator API",

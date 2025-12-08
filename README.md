@@ -18,7 +18,7 @@ There is interactive docs on `/docs` endpoint.
 2. Clone the project.
 3. Go to project folder.
 4. Run `uv sync`.
-5. Run `uv run python -m src.main`.
+5. Run `uv run main.py`.
 
 ### Installation with pip
 1. Rename '.env.example' file to '.env'.
@@ -28,7 +28,7 @@ There is interactive docs on `/docs` endpoint.
 5. Activate virtual environment:
     - *on Linux and macOS* `source .venv/bin/activate`
     - *on Windows* `.venv\Scripts\activate.bat` for CMD or `.\.venv\Scripts\Activate.ps1` for PowerShell.
-6. Run `python3 -m src.main` (use `py` or `python` on **Windows**)
+6. Run `python3 main.py` (use `py` or `python` on **Windows**)
 
 ### Installation with docker
 1. Rename '.env.example' file to '.env'.

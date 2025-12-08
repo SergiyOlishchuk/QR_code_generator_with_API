@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 COPY ./src ./src
 
-CMD ["python", "-m", "src.main"]
+CMD ["python3", "main.py"]
